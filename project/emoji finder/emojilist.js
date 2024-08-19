@@ -22,7 +22,7 @@ const emojiList = [
       description: "grinning face with smiling eyes",
       category: "Smileys & Emotion",
       aliases: ["smile"],
-      tags: ["happy", "joy", "laugh", "pleased"],
+      tags: ["hpy", "joy", "laugh", "pleased"],
       unicode_version: "6.0",
       ios_version: "6.0",
     },

@@ -1,23 +1,51 @@
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Added a bacifjfjuijdjkdf jeijfsdjiosoadjkjejdi8ufijsfjkdashiuhdkfhhsfaihfjhklwejhfiashiahsiuy0hfdopihehpiifdusihfiehwihihsaifhihasidhfdiorjkdfasd=fuidsjfddfjjfojf dfi fo faffdfjahdround color for better visibility */
+}
+
+#checkbox{
+  visibility: hidden;
+}
+.toggle{
+  width: 10rem;
+  height: 5rem;
+  background-color: black;
+  display: inline-block;
+  border-radius: 40px;
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+.circle{
+  top: 0.5rem;
+  left: 0.5rem;
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 50%;
+  transition: transform 0.3s ease; /* Added transition for smooth movement */
+}
+#checkbox:checked + .toggle .circle{
+  transform: translateX(5rem); /* Moved circle 100% of its parent's width */
+}
+.sun , .moon{
+  position: relative;
+  font-size: 3rem;
+}
+/* .moon{
+  position: relative;
+  font-size: 3rem;
+} */
+.heading{
+  font-size: 14px;
+}

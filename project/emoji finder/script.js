@@ -36,8 +36,8 @@ function attachListener() {
 function filterEmojis(e) {
   const keyword = e.target.value;
 
-  const filteredData = emojiList.filter((emoji) => {
-    if (emoji.description.includes(keyword)) return emoji;
+  const filteredData =emojiList.filter((emoji) => {
+   if(emoji.description.includes(keyword)) return emoji
     else if (emoji.category.includes(keyword)) return emoji;
     else if (emoji.aliases.includes(keyword)) return emoji;
     else if (emoji.tags.includes(keyword)) return emoji;
