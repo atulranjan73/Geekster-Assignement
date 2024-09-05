@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const addButton = document.getElementById("btn-1");
+    const addButton = document.querySelector("#btn-1");
     const textarea = document.getElementById("textarea");
     const colorPicker = document.getElementById("color");
     // const outputContainer = document.querySelector(".notes-container");
@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     addButton.addEventListener("click", function () {
         const noteText = textarea.value.trim();
+        // console.log(noteText)
         const noteColor = colorPicker.value;
 
         if (noteText !== "") {
