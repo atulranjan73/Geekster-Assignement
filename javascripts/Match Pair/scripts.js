@@ -1,4 +1,4 @@
-const frontGrid = document.querySelector('.game-front');
+const frontGrid = document.querySelector('.game-front')
 const attemptsOutput = document.querySelector('output');
 const restartButton = document.querySelector('.btn');
 

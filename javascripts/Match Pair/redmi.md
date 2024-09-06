@@ -13,7 +13,7 @@ This project is a simple Match the Pair game built using HTML, CSS, and JavaScri
 - [Project Structure](#project-structure)
 - [Code Explanation](#code-explanation)
   - [HTML](#html)
-  - [CSS](#css)
+  - [CSS](#CSS)
   - [JavaScript](#javascript)
 - [Future Improvements](#future-improvements)
 - [Contributing](#contributing)
