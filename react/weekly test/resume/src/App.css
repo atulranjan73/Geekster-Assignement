@@ -1,0 +1,512 @@
+/* Apply box-sizing globally */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container for Home */
+body, html {
+  background-color: #1a1a1d;
+  margin: 0;
+  padding: 0;
+  width: 100vw; /* Ensures full width without overflow */
+  overflow-x: hidden; /* Removes horizontal scroll */
+  box-sizing: border-box;
+  color:whitesmoke;
+}
+
+/* Navigation styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  height: 80px;
+  background-color: #2d2d34; /* Darker nav background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add subtle shadow */
+  position: sticky; /* Make the nav sticky */
+  top: 0;
+  z-index: 10;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* Logo styling */
+nav .logo h1 {
+  color: #f0f0f0;
+  font-size: 2rem;
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Clean font */
+  letter-spacing: 1px; /* Space out letters slightly */
+}
+
+/* Navigation list styling */
+.nav-items {
+  display: flex;
+  gap: 20px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease-in, color 0.3 ease-in;
+}
+
+nav ul li a:hover {
+ 
+  color: #fff;
+  border-bottom:10px solid #6f42c1;
+  transition: ease-in 2s;
+  
+}
+
+/* Projects Section */
+.projects {
+  text-align: center;
+  background-color: #1a1a1d;
+  padding: 2rem 0;
+}
+
+.projects h2 {
+  font-size: 2.8rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.projects .highlight {
+  color: #af5cff;
+}
+
+.projects p {
+  color: #aaa;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Card container */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Add padding for better mobile view */
+}
+
+/* Individual card styling */
+.card {
+  background-color: #222;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  color: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift on hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+.card h3 {
+  color: #af5cff;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #ddd;
+  margin-bottom: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+}
+
+/* Buttons in the card */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  background-color: #6f42c1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons button:hover {
+  background-color: #8a4ddd;
+  transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* Project image */
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+  }
+
+  .projects h2 {
+    font-size: 2.2rem;
+  }
+
+  .card-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .buttons button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+/* home page */
+/* Container for the whole home section */
+.home {
+  width: 100vw;
+  /* height: 80vh; */
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  
+  box-sizing: border-box;
+  color: white;
+}
+
+/* Flex container to split the left and right sections */
+.home-top {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20%;
+}
+
+/* Left section with text */
+.home-left {
+
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Styling for the text in the left section */
+.home-name {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Right section for the image */
+.home-right {
+  width: 50%;
+  margin-top: 5%;
+}
+
+/* Image styling for a cleaner look */
+.home-right img {
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+  .home-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-left, .home-right {
+    width: 100%;
+  }
+
+  .home-right img {
+    width: 60%;
+  }
+}
+.home-down{
+  margin-top: 10%;
+  padding: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20%;
+}
+.home-down-left{
+  width: 65%;
+}
+.home-down-left span{
+color:  rebeccapurple;
+}
+.home-down-right{
+  width: 35%;
+}
+.content{
+  padding: 30px;
+  
+}
+.content p{
+  padding: 10px;
+  font-size: 20px;
+  
+}
+
+
+/* About  */
+.About{
+  padding: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20%;
+}
+.About h1{
+  text-align: center;
+}
+.container {
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section {
+  margin-top: 50px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #a445ed; /* Custom highlight color */
+}
+
+.skillset .skill-grid,
+.tools .tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.skill, .tool {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid #a445ed;
+  border-radius: 8px;
+  padding: 20px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill:hover, .tool:hover {
+  transform: translateY(-10px);
+  background-color: rgba(164, 69, 237, 0.2);
+}
+
+.skill img, .tool img {
+  width: 70px;
+  height: auto;
+  filter: invert(100%); /* Makes icons white, assuming dark background */
+}
+
+@media (max-width: 768px) {
+  .skill-grid, .tool-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .skill, .tool {
+    width: 100px;
+    height: 100px;
+  }
+
+  .skill img, .tool img {
+    width: 50px;
+  }
+}
+.About ul{
+  padding: 30px;
+}
+
+
+
+
+.resume-container {
+  width: 80vw; /* Set width */
+  justify-content: center; /* Center content */
+  align-items: center; /* Center items vertically */
+  display: flex; /* Flex display for alignment */
+  flex-direction: column; /* Stack items vertically */
+  margin: 20px auto; /* Center horizontally with auto */
+}
+
+.download-btn {
+  margin-bottom: 20px; /* Space between the button and the image */
+}
+
+.download-btn button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding for button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s; /* Transition effect */
+}
+
+.download-btn button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.resume-image img {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border: 1px solid #ddd; /* Light border around image */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  margin: auto; /* Center image */
+}
+
+/* Optional: Add a title or description style */
+.resume-title {
+  font-size: 24px; /* Title font size */
+  margin-bottom: 10px; /* Space below title */
+  color: #333; /* Dark color for contrast */
+  text-align: center; /* Centered text */
+}
+
+
+.blog-container {
+  max-width: 800px; /* Maximum width of the blog */
+  margin: 20px auto; /* Center the container */
+  padding: 20px; /* Padding around the content */
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.blog-title {
+  font-size: 28px; /* Title font size */
+  margin-bottom: 20px; /* Space below the title */
+  color: #333; /* Dark color for the title */
+  text-align: center; /* Center the title */
+}
+
+.blog-content {
+  font-size: 18px; /* Content font size */
+  line-height: 1.6; /* Line height for readability */
+  margin-bottom: 15px; /* Space between paragraphs */
+  color: #555; /* Darker gray for text */
+}
+
+@media (max-width: 600px) {
+  .blog-container {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  .blog-title {
+    font-size: 24px; /* Smaller title font size */
+  }
+
+  .blog-content {
+    font-size: 16px; /* Smaller content font size */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* /* footer  */
+.footer {
+  background-color: #333; /* Dark background color */
+  color: white; /* White text color */
+  padding: 20px 0; /* Padding for top and bottom */
+  text-align: center; /* Center text */
+  position: relative; /* Relative positioning */
+  bottom: 0; /* Stick to the bottom */
+  width: 100%; /* Full width */
+}
+
+.footer-title {
+  font-size: 24px; /* Font size for the title */
+  margin: 0; /* Remove default margin */
+}
+
+.footer-text {
+  font-size: 14px; /* Font size for the text */
+  margin: 10px 0 0; /* Margin for spacing */
+}
