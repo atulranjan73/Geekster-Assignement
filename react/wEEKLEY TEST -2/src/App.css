@@ -1,0 +1,24 @@
+header{
+    border: 2px solid red ;
+    width: 100vw;
+     background-color: tomato;
+    height:70px;
+}
+.heading{
+    text-align: center;
+    color: white;
+   
+}
+nav{
+    margin-top: 20px;
+    display: flex;
+    gap: 40px;
+
+}
+nav button{
+    background-color: tomato;
+    width: 180px;
+    height: 40px;
+    color: aliceblue;
+    font-size: 18px ;
+}
