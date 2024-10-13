@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import './App.css';
-import './input.css';
+
 
 function App() {
   const [inputValue, setInputValue] = useState('');
@@ -8,41 +8,58 @@ function App() {
   const [allData, setAllData] = useState([]);
   const [page, setPage] = useState(1); // Track page number
   const [loading, setLoading] = useState(false); // Loading state
+  const [error, setError] = useState(null); // Error state
   const key = '23ZwDmFYhvnHklZi0Y4jEHyqUlxOo3U5CrJC_iqmqak';
 
   // Fetch data function
-  const fetchData = async (pageNum) => {
+  const fetchData = useCallback(async (pageNum) => {
     setLoading(true);
+    setError(null); // Reset error state
+
     const url = `https://api.unsplash.com/search/photos?page=${pageNum}&query=${fvalue}&client_id=${key}`;
+
     try {
       const response = await fetch(url);
       const data = await response.json();
-      console.log(data.results);
-      setAllData((prevData) => [...prevData, ...data.results]); // Append new data
+      if (data.results && data.results.length > 0) {
+        setAllData((prevData) => [...prevData, ...data.results]); // Append new data
+      } else {
+        setError('No images found.');
+      }
     } catch (error) {
-      console.error('Error fetching data:', error);
+      setError('Error fetching data. Please try again.');
     }
     setLoading(false);
-  };
+  }, [fvalue]);
 
   // Fetch new data when `fvalue` or `page` changes
   useEffect(() => {
     if (fvalue) {
       fetchData(page);
     }
-  }, [fvalue, page]);
+  }, [fvalue, page, fetchData]);
 
-  // Scroll event listener
+  // Scroll event listener with debounce
   useEffect(() => {
-    const handleScroll = () => {
+    const debounceScroll = (func, wait = 100) => {
+      let timeout;
+      return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          func.apply(this, args);
+        }, wait);
+      };
+    };
+
+    const handleScroll = debounceScroll(() => {
       if (
         window.innerHeight + document.documentElement.scrollTop + 1 >=
         document.documentElement.scrollHeight
       ) {
-        // When scrolled to bottom, load more images
         setPage((prevPage) => prevPage + 1);
       }
-    };
+    }, 200);
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -77,7 +94,9 @@ function App() {
           gap: '4rem',
         }}
       >
-        {allData.length > 0 ? (
+        {error ? (
+          <p>{error}</p>
+        ) : allData.length > 0 ? (
           allData.map((data, index) => (
             <img
               style={{
@@ -85,6 +104,7 @@ function App() {
                 height: '500px',
                 borderRadius: '15px',
                 border: '10px solid white',
+                objectFit: 'cover',
               }}
               key={index}
               src={data.urls.full}

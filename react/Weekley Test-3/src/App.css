@@ -1,0 +1,119 @@
+/* General body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  color: #fcfcfc;
+}
+
+/* Input container styling */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+input {
+  width: 300px;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #61dafb;
+  box-shadow: 0 0 8px rgba(97, 218, 251, 0.4);
+}
+
+/* Button styles */
+button {
+  padding: 0.8rem 1.2rem;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #21a1f1;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Grid container for images */
+.image-grid {
+  margin-top: 3rem;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.image-grid img {
+  flex: 1 1 22%; /* Ensures 4 cards per row */
+  max-width: 22%; /* Allows the images to stay within 4 columns */
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 10px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Loading and error message styles */
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 2rem;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 1024px) {
+  .image-grid img {
+    flex: 1 1 45%; /* Show 2 cards per row for smaller screens */
+    max-width: 45%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .image-grid {
+    gap: 1.5rem;
+  }
+
+  .image-grid img {
+    flex: 1 1 100%; /* Single card per row on mobile */
+    max-width: 100%;
+    height: auto;
+  }
+}
