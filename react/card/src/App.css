@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  height: 90vh;
+  margin: auto;
+  width: 90%;
+}
+
+.left, .right {
+  box-shadow: 2px 2px 2px 2px rgb(178, 39, 39);
+  width: 50%;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.box {
+  font-size: 22px;
+  background-color: #ede5e5;
+  line-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  padding: 0 2px;
+  margin:  10px auto;
+}
+
+.box button {
+  width: 120px;
+  background-color: rgb(34, 85, 139);
+  color: white;
+  font-size: 22px;
+}
+
+.average {
+  display: flex;
+  justify-content: space-around;
+}
+
+.disabled {
+  background-color: lightgray;
+  color: gray;
+  pointer-events: none;
+}
+.rigth{
+  height: 100vh;
+}
+.top{
+  height: 75%;
+}
+.down{
+  height: 10%;
+}
