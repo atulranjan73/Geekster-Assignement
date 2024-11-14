@@ -4,66 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Projects</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    .header{
-        text-align: center;
-    }
-    h1{
-        color: rgb(235, 91, 8);
-    }
-    .header img{
-        width: 100px;
-        border-radius: 50%;
-        
-    }
-    .html{
-        /* display: flex; */
-        flex-wrap: wrap;
-        text-align: center;
-
-        
-    }
-    .html a{
-        color: rgb(30, 51, 51);
-        text-align: center;
-        font-size: 24px;
-        text-decoration: none;
-        
-        
-        
-        
-    }
-    button{
-        
-        margin: 10px;
-        border-radius: 15px;
-        background-color: rgb(226, 226, 43);
-    
-    }
-</style>
 
 <body>
     <div class="header">
-        <img src="image/atul.jpg">
-        <h1>Welcome to Html Assignment</h1>
+        <img src="../projectscreenshort/pfofile.jpg" alt="Atul's Profile Picture">
+        <h1>Welcome to My HTML Assignment Projects</h1>
     </div>
-    <div class="html">
-        <button><a href="./RESUME/index.html">Resume</a></button>
-        <button><a href="./the cat photo/index.html">The cat Photo</a></button>
-        <button><a href="foorm/index.html">Form</a></button>
-        <button><a href="Tribute Page/index.html">Tribute Page</a></button>
-        <button><a href="Table Formation/index.html">Table Formation</a></button>
-        <button><a href="iframe/index.html">i-frame</a></button>
-        <button><a href="Css color maker/index.html"> CSS Color Makar</a></button>
-        <button><a href="Camper coffee/index.html">Cafe menu</a></button>
-        <button><a href="blog/index.html">Blog</a></button>
 
+    <div class="projects-container">
+        <!-- Project 1: Resume -->
+        <div class="project-card">
+            <img src="../projectscreenshort/resume.png" alt="Resume Project Screenshot">
+            <h2>Resume</h2>
+            <p>This project showcases my professional resume using HTML and CSS.</p>
+            <div class="button-group">
+                <button onclick="openLink('https://atulranjan73.github.io/Geekster-Assignement/All%20Html/RESUME/index.html')">Live Link</button>
+                <button onclick="openLink('https://github.com/atulranjan73/Geekster-Assignement/tree/main/All%20Html/RESUME')">GitHub Link</button>
+            </div>
+        </div>
 
+        <!-- Project 2: The Cat Photo -->
+        <div class="project-card">
+            <img src="../projectscreenshort/cat.png" alt="Cat Photo Project Screenshot">
+            <h2>The Cat Photo</h2>
+            <p>A fun project featuring adorable cat photos in a creative layout.</p>
+            <div class="button-group">
+                <button onclick="openLink('https://atulranjan73.github.io/Geekster-Assignement/All%20Html/the%20cat%20photo/index.html')">Live Link</button>
+                <button onclick="openLink('https://github.com/atulranjan73/Geekster-Assignement/tree/main/All%20Html/the%20cat%20photo')">GitHub Link</button>
+            </div>
+        </div>
 
+        <!-- Project 3: Cafe Menu -->
+        <div class="project-card">
+            <img src="../projectscreenshort/coffe.png" alt="Cafe Menu Project Screenshot">
+            <h2>Cafe Menu</h2>
+            <p>A simple, fun menu layout for a cafe, built using HTML and CSS.</p>
+            <div class="button-group">
+                <button onclick="openLink('https://atulranjan73.github.io/Geekster-Assignement/All%20Html/Camper%20coffee/index.html')">Live Link</button>
+                <button onclick="openLink('https://github.com/atulranjan73/Geekster-Assignement/tree/main/All%20Html/Camper%20coffee')">GitHub Link</button>
+            </div>
+        </div>
 
+        <!-- Project 4: Table Formation -->
+        <div class="project-card">
+            <img src="../projectscreenshort/table.png" alt="Table Formation Project Screenshot">
+            <h2>Table Formation</h2>
+            <p>A project focused on creating structured tables using HTML.</p>
+            <div class="button-group">
+                <button onclick="openLink('https://atulranjan73.github.io/Geekster-Assignement/All%20Html/Table%20Formation/index.html')">Live Link</button>
+                <button onclick="openLink('https://github.com/atulranjan73/Geekster-Assignement/tree/main/All%20Html/Table%20Formation')">GitHub Link</button>
+            </div>
+        </div>
+
+        <!-- Project 5: Form -->
+        <div class="project-card">
+            <img src="../projectscreenshort/form.png" alt="Form Project Screenshot">
+            <h2>Form</h2>
+            <p>An HTML form example, demonstrating input fields and form submission.</p>
+            <div class="button-group">
+                <button onclick="openLink('https://atulranjan73.github.io/Geekster-Assignement/All%20Html/foorm/index.html')">Live Link</button>
+                <button onclick="openLink('https://github.com/atulranjan73/Geekster-Assignement/tree/main/All%20Html/foorm')">GitHub Link</button>
+            </div>
+        </div>
+
+        <!-- Project 6: Blog -->
+        <div class="project-card">
+            <img src="../projectscreenshort/blog.png" alt="Blog Project Screenshot">
+            <h2>Blog</h2>
+            <p>A simple HTML and CSS layout for a blog page.</p>
+            <div class="button-group">
+                <button onclick="openLink('https://atulranjan73.github.io/Geekster-Assignement/All%20Html/blog/index.html')">Live Link</button>
+                <button onclick="openLink('https://github.com/atulranjan73/Geekster-Assignement/tree/main/All%20Html/blog')">GitHub Link</button>
+            </div>
+        </div>
     </div>
+
+    <script src="scripts.js"></script>
 </body>
 
 </html>
