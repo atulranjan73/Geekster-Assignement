@@ -1,12 +1,13 @@
+const red = document.getElementById('red')
+const yellow = document.getElementById('yellow')
+const green= document.getElementById('green')
 const lights = [
-    document.getElementById('red'),
-    document.getElementById('yellow'),
-    document.getElementById('green')
+red , yellow ,green
 ]
 let currentIndex = 0 ;
 function Changelight(){
     for(let i = 0 ; i<lights.length ; i++){
-        lights[i].style.backgroundColor= '#555'
+        lights[i].style.backgroundColor= 'black'
     }
     lights[currentIndex].style.backgroundColor = lights[currentIndex].id;
 }
