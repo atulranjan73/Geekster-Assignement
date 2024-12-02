@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atul Ranjan's Projects Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header {
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .header img {
+            width: 120px;
+            border-radius: 50%;
+        }
+
+        .header h1 {
+            margin: 10px 0;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .project-card h2 {
+            margin: 15px 0 10px;
+            font-size: 1.5rem;
+            color: #4CAF50;
+        }
+
+        .project-card p {
+            padding: 0 10px 10px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px;
+            border-top: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        .button-group button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-group button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="../projectscreenshort/pfofile.jpg" alt="Atul's Profile Picture">
+        <h1>Welcome to Atul Ranjan's Project Portfolio</h1>
+        <p>This portfolio showcases a variety of projects demonstrating skills in web development, JavaScript, React.js, and design. Explore the projects below to learn more!</p>
+    </div>
+
+    <div class="projects-container">
+        <!-- Project Cards -->
+        <div class="project-card">
+            <img src="../projectscreenshort/food.png" alt="Food Delivery App">
+            <h2>Food Delivery App</h2>
+            <p>A responsive web app showcasing a professional food delivery system using HTML and CSS.</p>
+            <div class="button-group">
+                <button onclick="openLink('https://keen-pithivier-bedde0.netlify.app/')">Live Link</button>
+                <button onclick="openLink('https://github.com/atulranjan73/Geekster-Assignement/tree/main/react/food%20Delevey%20Apps')">GitHub</button>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="../projectscreenshort/card.png" alt="Team Management">
+            <h2>Team Management</h2>
+            <p>Add, remove, and calculate team averages with this interactive tool.</p>
+            <div class="button-group">
+                <button onclick="openLink('https://keen-pithivier-bedde0.netlify.app/')">Live Link</button>
+                <button onclick="openLink('https://github.com/atulranjan73/Geekster-Assignement/tree/main/react/card')">GitHub</button>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="../projectscreenshort/profile link.png" alt="Profile Hub">
+            <h2>Profile Hub</h2>
+            <p>A centralized hub showcasing all social media profiles.</p>
+            <div class="button-group">
+                <button onclick="openLink('https://jolly-melomakarona-b84f65.netlify.app/')">Live Link</button>
+                <button onclick="openLink('https://github.com/atulranjan73/Geekster-Assignement/tree/main/react/card')">GitHub</button>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="../projectscreenshort/ticket.png" alt="Railway Ticket Selling App">
+            <h2>Railway Ticket Selling App</h2>
+            <p>A dynamic app with admin and user panels for ticket management.</p>
+            <div class="button-group">
+                <button onclick="openLink('https://clinquant-malabi-1ec5e4.netlify.app/')">Live Link</button>
+                <button onclick="openLink('')">Private Link</button>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="../projectscreenshort/image search Api.png" alt="Image Search API">
+            <h2>Image Search API</h2>
+            <p>An app integrating an API to search for images based on user input.</p>
+            <div class="button-group">
+                <button onclick="openLink('https://monumental-brioche-5421c7.netlify.app/')">Live Link</button>
+                <button onclick="openLink('https://github.com/atulranjan73/Geekster-Assignement/tree/main/react/image%20search%20Api')">GitHub</button>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="../projectscreenshort/compiler.png" alt="Online Compiler">
+            <h2>Online Compiler</h2>
+            <p>Run code in multiple languages, save it locally, and edit as needed.</p>
+            <div class="button-group">
+                <button onclick="openLink('https://regal-phoenix-d6f092.netlify.app/playground/9941a684-7c02-47bd-88fc-04068790d40b/e08e67ba-2059-4e3f-a4f7-a50a24a02ad4')">Live Link</button>
+                <button onclick="openLink('')">Private Link</button>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="../projectscreenshort/education plane.png" alt="Education Planner">
+            <h2>Education Planner</h2>
+            <p>Plan and organize study subjects and hours effectively.</p>
+            <div class="button-group">
+                <button onclick="openLink('https://singular-moxie-0a450a.netlify.app/')">Live Link</button>
+                <button onclick="openLink('https://github.com/atulranjan73/Geekster-Assignement/tree/main/react/Education%20pane/Education_plan')">GitHub</button>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="../projectscreenshort/portfolio.png" alt="Portfolio">
+            <h2>Portfolio</h2>
+            <p>A professionally designed portfolio to showcase projects and skills.</p>
+            <div class="button-group">
+                <button onclick="openLink('https://app.netlify.com/sites/fancy-fenglisu-f5ddd3/overview')">Live Link</button>
+                <button onclick="openLink('https://github.com/atulranjan73/Geekster-Assignement/tree/main/react/Resume/resume')">GitHub</button>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="../projectscreenshort/ecommerce.png" alt="E-Commerce">
+            <h2>Authentication-Based E-Commerce</h2>
+            <p>An e-commerce site with Firebase authentication and secure user login.</p>
+            <div class="button-group">
+                <button onclick="openLink('https://fancy-fenglisu-f5ddd3.netlify.app/')">Live Link</button>
+                <button onclick="openLink('https://github.com/atulranjan73/Geekster-Assignement/tree/main/react/Resume/resume')">GitHub</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Open link function
+        function openLink(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+
+</html>
